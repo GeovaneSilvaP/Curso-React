@@ -4,10 +4,11 @@ body{
 }
 
 h1{
-  color: #333;
+  color: #439ab4;
 }
 
 p{
+  color: aqua;
   background-color: #999;
   padding: 10px;
 }

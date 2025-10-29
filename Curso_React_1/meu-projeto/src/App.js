@@ -1,9 +1,10 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { HelloWord } from "./components/HelloWord";
-import { SyMyName } from "./components/SyMyName";
 import { Pessoa } from "./components/Pessoa";
 import { Frase } from "./components/Frase";
+import { SuaCidade } from "./components/Teste";
+import { SyMayName } from "./components/SyMayName";
 
 function App() {
   const nome = "Aurora";
@@ -12,17 +13,21 @@ function App() {
     <div className="App">
       <h1>Testando CSS</h1>
       <Frase/>
-      <Frase/>
       <HelloWord />
-      <SyMyName nome="Geovane" />
-      <SyMyName nome="Iury" />
-      <SyMyName nome={nome} />
+      <SyMayName nome="Geovane"/>
+      <SyMayName aula="React"/>
+      <SyMayName nome={nome}/>
       <Pessoa
         nome="Geovane"
         idade="23"
         profissao="Programador"
         foto="https://placehold.co/150x150"
       />
+      <SuaCidade
+      cidade="Cajari"
+      numero="188"
+      estado="Maranhão"
+      rua="Clodomir Serejo"/>
     </div>
   );
 }

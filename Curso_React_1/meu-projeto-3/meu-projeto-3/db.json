@@ -1,20 +1,33 @@
 {
-  "projects": [],
-  "categories":[
+  "projects": [
     {
-        "id": 1,
-        "name": "Infra"
-    },
-     {
-        "id": 2,
-        "name": "Desenvolvimento"
-    },
-     {
-        "id": 3,
+      "id": "f100",
+      "name": "Projeto",
+      "budget": "5000",
+      "category": {
+        "id": "3",
         "name": "Disign"
-    }, {
-        "id": 4,
-        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": []
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Infra"
+    },
+    {
+      "id": "2",
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": "3",
+      "name": "Disign"
+    },
+    {
+      "id": "4",
+      "name": "Planejamento"
     }
   ]
 }

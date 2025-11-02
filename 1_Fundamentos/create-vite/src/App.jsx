@@ -2,6 +2,7 @@ import './App.css'
 import FirstComponents from './components/FirstComponents';
 import TemplteExpression from './components/TempleteExpression';
 import MyComponents from "./components/MyComponents";
+import Events from './components/Events';
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <FirstComponents/>
       <TemplteExpression/>
       <MyComponents/>
+      <Events/>
     </div>
   )
 }

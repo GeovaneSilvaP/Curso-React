@@ -1,6 +1,7 @@
 import './App.css'
 import FirstComponents from './components/FirstComponents';
 import TemplteExpression from './components/TempleteExpression';
+import MyComponents from "./components/MyComponents";
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
       <h1>Fundamentos do React</h1>
       <FirstComponents/>
       <TemplteExpression/>
+      <MyComponents/>
     </div>
   )
 }

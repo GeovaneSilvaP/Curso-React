@@ -1,7 +1,7 @@
 function Message({msg}) {
     return(
         <div>
-            <p>A memsagem é: {msg}</p>
+            <p>A mensagem é: {msg}</p>
         </div>
     )
 }

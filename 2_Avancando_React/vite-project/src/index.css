@@ -33,6 +33,11 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: #747bff;
+}
+
+h2{
+  color: rgb(255, 145, 0);
 }
 
 button {
@@ -65,4 +70,8 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+h3{
+  color: aqua;
 }

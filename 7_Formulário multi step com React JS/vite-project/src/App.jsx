@@ -8,13 +8,34 @@ import Steps from "./components/Steps";
 
 //Hooks
 import { useForm } from "./hooks/userForm";
+import { useState } from "react";
 
 import "./App.css";
 
-function App() {
-  const formComponents = [<UserForm />, <ReviewForm />, <Thanks />];
+const formTemplate = {
+  name: "",
+  email: "",
+  review: "",
+  comment: "",
+};
 
-  const {currentStep, currentComponent, changeStep, isLastStep, isFirsStep} = useForm(formComponents)
+function App() {
+  const [data, setData] = useState(formTemplate);
+
+  const updateFieldHandeler = (key, value) => {
+    setData((prev)=>{
+      return {...prev, [key]: value}
+    })
+  }
+
+  const formComponents = [
+    <UserForm data={data} updateFieldHandeler={updateFieldHandeler}/>,
+    <ReviewForm data={data} updateFieldHandeler={updateFieldHandeler}/>,
+    <Thanks data={data} />,
+  ];
+
+  const { currentStep, currentComponent, changeStep, isLastStep, isFirsStep } =
+    useForm(formComponents);
 
   return (
     <div className="app">
@@ -26,26 +47,26 @@ function App() {
         </p>
       </div>
       <div className="form-container">
-        <Steps correntsStep={currentStep}/>
+        <Steps correntsStep={currentStep} />
         <form onSubmit={(e) => changeStep(currentStep + 1, e)}>
           <div className="inputs-container">{currentComponent}</div>
           <div className="actions">
-            {!isFirsStep &&(
+            {!isFirsStep && (
               <button type="button" onClick={() => changeStep(currentStep - 1)}>
-              <GrFormPrevious />
-              <span>Voltar</span>
-            </button>
+                <GrFormPrevious />
+                <span>Voltar</span>
+              </button>
             )}
             {!isLastStep ? (
               <button type="submit">
-              <span>Avançar</span>
-              <GrFormNext />
-            </button>
+                <span>Avançar</span>
+                <GrFormNext />
+              </button>
             ) : (
               <button type="button">
-              <span>Enviar</span>
-              <FiSend />
-            </button>
+                <span>Enviar</span>
+                <FiSend />
+              </button>
             )}
           </div>
         </form>

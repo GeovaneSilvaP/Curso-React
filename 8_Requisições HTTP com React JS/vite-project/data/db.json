@@ -1,0 +1,108 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Teclado Mecânico RGB",
+      "price": 249.9,
+      "description": "Teclado com iluminação RGB e switches azuis."
+    },
+    {
+      "id": "2",
+      "name": "Mouse Gamer 7200 DPI",
+      "price": 129.9,
+      "description": "Mouse ergonômico com sensor óptico de alta precisão."
+    },
+    {
+      "id": "3",
+      "name": "Cadeira Ergonômica",
+      "price": 899,
+      "description": "Cadeira confortável com apoio de cabeça e regulagem de altura."
+    },
+    {
+      "id": "4",
+      "name": "Monitor 24'' Full HD",
+      "price": 799,
+      "description": "Monitor com painel IPS e bordas finas."
+    },
+    {
+      "id": "5",
+      "name": "Capa de Chuva Impermeável",
+      "price": 55.5,
+      "description": "Capa leve e resistente para uso em dias chuvosos."
+    },
+    {
+      "id": "6",
+      "name": "Cabo HDMI 2.0 - 2 metros",
+      "price": 29.9,
+      "description": "Cabo compatível com 4K e HDR, ideal para TVs e monitores."
+    },
+    {
+      "id": "7",
+      "name": "Suporte para Monitor",
+      "price": 120,
+      "description": "Suporte articulado com ajuste de altura."
+    },
+    {
+      "id": "8",
+      "name": "Suporte para Microfone",
+      "price": 69.9,
+      "description": "Braço articulado de metal com fixação em mesa."
+    },
+    {
+      "id": "9",
+      "name": "Headset com Microfone",
+      "price": 199,
+      "description": "Headset estéreo com som imersivo e microfone ajustável."
+    },
+    {
+      "id": "10",
+      "name": "Cabo USB-C 1,5m",
+      "price": 25,
+      "description": "Cabo de carregamento rápido e transferência de dados."
+    },
+    {
+      "id": "b531",
+      "name": "Teclado Mecânico RGB",
+      "price": "249.90"
+    },
+    {
+      "id": "e2f2",
+      "name": " Cabo USB-C 1,5m",
+      "price": "25"
+    },
+    {
+      "id": "bf1e",
+      "name": "PS4",
+      "price": "2000"
+    },
+    {
+      "id": "a29d"
+    },
+    {
+      "id": "89dc"
+    },
+    {
+      "id": "2b3c"
+    },
+    {
+      "id": "bc12",
+      "name": "pc",
+      "price": "44"
+    },
+    {
+      "id": "8c10",
+      "name": "Teste",
+      "price": "2"
+    },
+    {
+      "id": "f560",
+      "name": "Testee",
+      "price": "3"
+    },
+    {
+      "id": "f416",
+      "name": "prpr",
+      "price": "dad"
+    }
+  ]
+}

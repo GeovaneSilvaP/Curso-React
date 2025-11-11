@@ -5,8 +5,8 @@ export const useFetch = (url) => {
   const [config, setConfig] = useState(null);
   const [method, setMethod] = useState(null);
   const [callFetch, setCallFetch] = useState(null);
-
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const httpConfig = (data, method) => {
     if (method === "POST") {
@@ -21,41 +21,57 @@ export const useFetch = (url) => {
     }
   };
 
-  // GET
+  // 🔹 GET
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
+      setError(null);
 
-      const res = await fetch(url);
-      const json = await res.json();
+      try {
+        const res = await fetch(url);
 
-      setLoading(false)
+        if (!res.ok) {
+          throw new Error(`Erro na requisição: ${res.status}`);
+        }
 
-      setData(json);
+        const json = await res.json();
+        setData(json);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchData();
   }, [url, callFetch]);
 
-  // POST
+  // 🔹 POST
   useEffect(() => {
     const httpRequest = async () => {
-      let json;
+      if (!config) return;
 
-      if (method === "POST") {
-        setLoading(true)
+      setLoading(true);
+      setError(null);
 
+      try {
         const res = await fetch(url, config);
-        json = await res.json();
 
-        setLoading(false)
+        if (!res.ok) {
+          throw new Error(`Erro no POST: ${res.status}`);
+        }
 
+        const json = await res.json();
         setCallFetch(json);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
       }
     };
 
     httpRequest();
-  }, [config]);
+  }, [config, url]);
 
-  return { data, httpConfig, loading };
+  return { data, httpConfig, loading, error };
 };

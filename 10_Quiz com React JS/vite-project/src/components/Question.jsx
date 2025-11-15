@@ -4,6 +4,8 @@ import { QuizContext } from "../context/quiz";
 
 import "./Question.css";
 
+import Options from "./Options";
+
 const Question = () => {
   const [quizState, dispatch] = useContext(QuizContext);
 
@@ -16,9 +18,13 @@ const Question = () => {
       </p>
       <h2>{currentQuestion.question}</h2>
       <div id="options-container">
-        <p>Opções</p>
+        {currentQuestion.options.map((option)=>(
+          <Options option={option} key={option}/>
+        ))}
       </div>
-      <button>Continuar</button>
+      <button onClick={() => dispatch({ type: "CHANGE_QUESTION" })}>
+        Continuar
+      </button>
     </div>
   );
 };
